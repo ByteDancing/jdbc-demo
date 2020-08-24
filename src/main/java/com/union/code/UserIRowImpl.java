@@ -11,7 +11,7 @@ import java.util.List;
  * @author Mr.Cheng
  * @date 2020/8/21
  */
-public class UserIRowImpl implements IRow<User> {
+public class UserIRowImpl implements IRow {
     @Override
     public List<User> mapping(ResultSet resultSet) {
         List<User> userList = null;

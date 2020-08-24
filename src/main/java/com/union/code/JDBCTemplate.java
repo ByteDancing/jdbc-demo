@@ -41,7 +41,7 @@ public class JDBCTemplate {
     }
 
     //初步优化为可以查询userList的方法
-    public static List<User> query(String sql, IRow row, Object... params) throws SQLException {
+    public static <T> T query(String sql, IRow row, Object... params) throws SQLException {
         Connection connection = JDBCUtils.connection();
         PreparedStatement ps = connection.prepareStatement(sql);
         /*sql的？参数赋值*/
